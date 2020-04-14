@@ -16,8 +16,8 @@ All the snippets and projects related to this course will be found in [`projects
 ## What are Bots
 
 - Simple telegram accounts operated by an application
-- Not actually designed for casual chatting
-- Can be used to simplify task
+- Not actually designed for chatting
+- Can be used to simplify the task
   - Teach
   - Play
   - Search
@@ -43,8 +43,8 @@ All the snippets and projects related to this course will be found in [`projects
 
 1. Send `/mybots` command to list your bot, select the desired bot
 2. Click on "**Bot Settings**" and you will see various options.
-3. Click on "[**Inline Mode**](https://core.telegram.org/bots/inline)". If you want the bot to accept inline messages beyon the commands.
-4. Now you can click on **Back to Bot** button and click on **Edit Bot** button. Here you can customize your bot like _setting a bot description (what it does, what it is used for etc)_, _setting a bot about_ and _profile picture_.
+3. Click on "[**Inline Mode**](https://core.telegram.org/bots/inline)". If you want the bot to accept inline messages beyond the commands.
+4. Now you can click on **Back to Bot** button and click on **Edit Bot** button. Here you can customize your bots like _setting a bot description (what it does, what it is used for etc)_, _setting a bot about_ and _profile picture_.
 
 **NOTE:** While changing the profile picture, botfather expects you to upload a valid image file.
 
@@ -52,9 +52,9 @@ All the snippets and projects related to this course will be found in [`projects
 
 1. Only user can initiate the chat
 2. The download limit is 20MB and upload limit is 50MB only
-3. Send messages limit is capped upto 30 msg per second. However you can ask **@botsupport** to increase it.
+3. Send messages limit is capped up to 30 msg per second. However, you can ask **@botsupport** to increase it.
 
-With this limitation, comes another power, bots can edit own messages and another's messages in channel where bot has admin rights
+With this limitation, comes another power, bots can edit own messages and another's messages in the channel where the bot has admin rights
 
 ## Getting messages from Telegram
 
@@ -64,7 +64,7 @@ There are two ways to get user messages from telegram.
 It's a way of asking Telegram every _X_ seconds whether any new message has come, and receive messages or asks later from telegram.
 
 **Web Hooks** <br>
-It's a way in which telegram sends all updates to the URL that has been configured to accept messages as soon as user sends new messages.
+It's a way in which telegram sends all updates to the URL that has been configured to accept messages as soon as the user sends new messages.
 
 ## HTTP Interface of Bots API
 
@@ -137,9 +137,9 @@ More methods on Get Updates: https://core.telegram.org/bots/api#getting-updates
 
 Method Name: [`sendMessage`](https://core.telegram.org/bots/api#sendmessage)
 
-In this you will see me creating an echo bot that will be listening to all the messages sent by user. I will then read the last message (`-1` index in the python list) and send the same message with the format "**You send me "{MESSAGE_TEXT}"**" message.
+In this, you will see me creating an echo bot that will be listening to all the messages sent by the user. I will then read the last message (`-1` index in the python list) and send the same message with the format "**You send me "{MESSAGE_TEXT}"**" message.
 
-The code is self explainatory, and i have added some comments. However if you couldn't get anything, leave a comment
+The code is self-explanatory, and I have added some comments. However, if you couldn't get anything, leave a comment
 
 ```py
 import urllib.request as request
@@ -286,7 +286,7 @@ Make sure you add the API Key before running this code. After running the above 
 
 # Telegram Bot Libraries
 
-As you have seen, telegram provides plethora of methods and APIs to handle the bot through any language, the open source community has developed a python client using these API under the hood to increase developer's productivity.
+As you have seen, telegram provides a plethora of methods and APIs to handle the bot through any language, the open-source community has developed a python client using these API under the hood to increase developer's productivity.
 
 The one I will be using is [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot). While making this course, it has approx. _10k stars_, _38 open issues_ and last commit was made _2 days ago_
 
@@ -312,13 +312,13 @@ bot = Bot("API KEY")
 print(bot.get_me())
 ```
 
-How fascinating, the developers encapsulated all the backend, letting other developers to write neat and clone. It not only provide neat code, but also makes payment processing, handlers and other more features even beyond sending HTTP Requests
+How fascinating, the developers encapsulated all the backend, letting other developers write neat and clone. It not only provides neat code but also makes payment processing, handlers, and other more features even beyond sending HTTP Requests
 
 The complete documentation of python-telegram-bot: https://python-telegram-bot.readthedocs.io/en/stable/
 
 ## Using Handlers on Commands
 
-I hope you would have created some commands, now lets make the bot handle those
+I hope you would have created some commands, now let's make the bot handle those
 
 The library `python-telegram-bot` provides various [Handlers](https://python-telegram-bot.readthedocs.io/en/latest/telegram.html#handlers) from which I will be using [CommandHandler](https://python-telegram-bot.readthedocs.io/en/latest/telegram.ext.commandhandler.html#telegram-ext-commandhandler)
 
@@ -408,15 +408,15 @@ dispatcher.add_handler(CommandHandler("start", start))
 updater.start_polling()
 ```
 
-The message user will recieve will be the rendered HTML you have passed in `text` argument
+The message user will receive will be the rendered HTML you have passed in `text` argument
 
 ## Using Keyboards to Build Menus
 
-In this you will embrace the power of another tool provided by telegram, Keyboard. Now telegram has two types plain keyboard and inline, the first is attached to the group or chat. The second one is attached to the message
+In this, you will embrace the power of another tool provided by telegram, Keyboard. Telegram has two types plain keyboard and inline, the first is attached to the group or chat. The second one is attached to the message
 
 ### Simple Keyboard
 
-In this I will be using [`telegram.ReplyKeyboardMarkup`](https://python-telegram-bot.readthedocs.io/en/stable/telegram.replykeyboardmarkup.html) to add new keyboard to the chat and [`telegram.ReplyKeyboardRemove`](https://python-telegram-bot.readthedocs.io/en/stable/telegram.replykeyboardremove.html) to remove the keyboard from the chat
+In this, I will be using [`telegram.ReplyKeyboardMarkup`](https://python-telegram-bot.readthedocs.io/en/stable/telegram.replykeyboardmarkup.html) to add new keyboard to the chat and [`telegram.ReplyKeyboardRemove`](https://python-telegram-bot.readthedocs.io/en/stable/telegram.replykeyboardremove.html) to remove the keyboard from the chat
 
 ```py
 from telegram.ext.updater import Updater
