@@ -98,7 +98,7 @@ In my case,
 Available Methods: https://core.telegram.org/bots/api#getting-updates
 Method Name: [`getUpdates`](https://core.telegram.org/bots/api#getupdates)
 
-In my case (there was no new message)
+In my case
 
 ```json
 {
