@@ -297,6 +297,7 @@ The one I will be using is [python-telegram-bot](https://github.com/python-teleg
 pip install -U python-telegram-bot
 
 # via conda
+conda install -c conda-forge python-telegram-bot
 ```
 
 **Glance of the Usage** <br>
